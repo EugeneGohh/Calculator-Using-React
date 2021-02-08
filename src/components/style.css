@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator-body {
+  max-width: 800px;
+  margin: auto;
+}
+
+.result-here {
+  height: 60px;
+  background-color: #bbb;
+  width: 100%;
+}
+
+.result-here p {
+  font-size: 40px;
+  padding: 100px;
+}
+
+.grid-container {
+  display: block;
+  background-color: #bbb;
+}
+
+button {
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+}
