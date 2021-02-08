@@ -14,13 +14,6 @@
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
-
-  "lint-staged": {
-       "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-         "prettier --write"
-       ]
-     },
-    
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -44,10 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }, 
-  "husky": {
-       "hooks": {
-          "pre-commit": "lint-staged"
-        }
   }
 }
