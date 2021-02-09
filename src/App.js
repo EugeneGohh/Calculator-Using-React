@@ -1,4 +1,7 @@
 import "./components/style.css";
+import Cancel from "./components/Assignmen Operator Icons/CancelIcon";
+import Add from "./components/Assignmen Operator Icons/AddIcon";
+import Minus from "./components/Assignmen Operator Icons/MinusIcon";
 
 function App() {
   return (
@@ -11,26 +14,33 @@ function App() {
         <button className="grid-item">C</button>
         <button className="grid-item">÷</button>
         <button className="grid-item">×</button>
+        <button className="grid-item">
+          <Cancel />
+        </button>
         <br></br>
-        <button className="grid-item">5</button>
-        <button className="grid-item">6</button>
         <button className="grid-item">7</button>
         <button className="grid-item">8</button>
-        <br></br>
         <button className="grid-item">9</button>
-        <button className="grid-item">10</button>
-        <button className="grid-item">11</button>
-        <button className="grid-item">12</button>
+        <button className="grid-item">
+          <Add />
+        </button>
         <br></br>
-        <button iclassName="grid-item">13</button>
-        <button className="grid-item">14</button>
-        <button className="grid-item">15</button>
-        <button className="grid-item">16</button>
+        <button className="grid-item">4</button>
+        <button className="grid-item">5</button>
+        <button className="grid-item">6</button>
+        <button className="grid-item">
+          <Minus />
+        </button>
         <br></br>
-        <button className="grid-item">17</button>
-        <button className="grid-item">18</button>
-        <button className="grid-item">19</button>
-        <button class="grid-item">20</button>
+        <button iclassName="grid-item">1</button>
+        <button className="grid-item">2</button>
+        <button className="grid-item">3</button>
+
+        <br></br>
+        <button className="grid-item">%</button>
+        <button className="grid-item">0</button>
+        <button className="grid-item">.</button>
+        <button className="grid-item">=</button>
       </div>
     </div>
   );
