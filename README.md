@@ -1,3 +1,27 @@
+# Calculator Using React
+
+## Contents
+* [Info](#Info)<br>
+* [Technologies Used](#Technologies-Used)<br>
+* [Status](#Status)<br>
+
+## Info
+> Make a calculator using React
+
+## Technologies Used
+1. JavaScript
+2. React
+3. npm
+4. MaterialUI
+5. Git & GitHub
+
+## Status
+- [x] Plan project
+- [x] Build the UI
+- [x] Write some logic
+- [x] Testing
+- [x] Project is finished
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
