@@ -1,4 +1,5 @@
 # Calculator Using React
+![Image of React](https://hackernoon.com/images/z2xg2bpo.jpg)
 
 ## Contents
 * [Info](#Info)<br>
