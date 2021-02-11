@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 class CalcOutput extends Component {
   render() {
-    const { result } = this.props;
+    const { outcome } = this.props;
     return (
       <div className="result">
-        <p>{result}</p>
+        <p>{outcome}</p>
       </div>
     );
   }
