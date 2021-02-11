@@ -1,49 +1,73 @@
+import React, { Component } from "react";
 import "./components/style.css";
-import Cancel from "./components/Assignmen Operator Icons/CancelIcon";
-import Add from "./components/Assignmen Operator Icons/AddIcon";
-import Minus from "./components/Assignmen Operator Icons/MinusIcon";
+import CalcOutput from "./components/calcOutput";
+import CalcButton from "./components/calcButton";
 
-function App() {
-  return (
-    <div className="calculator-body">
-      <div className="result-here">
-        <p></p>
+export class App extends Component {
+  constructor() {
+    super();
+
+    /* Result is a dynamic information thus we'll use (this.state) */
+    this.state = {
+      outcome: "",
+    };
+  }
+
+  onClick = (button) => {
+    /* Condition */
+
+    if (button === "=") {
+      this.calculate();
+    } else if (button === "C") {
+      this.reset();
+    } else if (button === ".CE") {
+      this.backspace();
+    } else {
+      this.setState({
+        outcome: this.state.outcome + button,
+      });
+    }
+  };
+
+  /* Calculate */
+  calculate = () => {
+    try {
+      this.setState({
+        /* Evaluates JavaScript code represented as a string */
+        outcome: (eval(this.state.outcome) || "") + "",
+      });
+    } catch (e) {
+      this.setState({
+        outcome: "Syntax Error/Undefined",
+      });
+    }
+  };
+
+  /* Reset */
+  reset = () => {
+    this.setState({
+      outcome: "",
+    });
+  };
+
+  /* Backspace */
+  backspace = () => {
+    this.setState({
+      /*  Returns the selected elements in an array, as a new array object */
+      outcome: this.state.outcome.slice(0, -1),
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <div className="calculator-body">
+          <CalcOutput outcome={this.state.outcome} />
+          <CalcButton onClick={this.onClick} />
+        </div>
       </div>
-
-      <div className="grid-container">
-        <button className="grid-item">C</button>
-        <button className="grid-item">÷</button>
-        <button className="grid-item">×</button>
-        <button className="grid-item">
-          <Cancel />
-        </button>
-        <br></br>
-        <button className="grid-item">7</button>
-        <button className="grid-item">8</button>
-        <button className="grid-item">9</button>
-        <button className="grid-item">
-          <Add />
-        </button>
-        <br></br>
-        <button className="grid-item">4</button>
-        <button className="grid-item">5</button>
-        <button className="grid-item">6</button>
-        <button className="grid-item">
-          <Minus />
-        </button>
-        <br></br>
-        <button iclassName="grid-item">1</button>
-        <button className="grid-item">2</button>
-        <button className="grid-item">3</button>
-
-        <br></br>
-        <button className="grid-item">%</button>
-        <button className="grid-item">0</button>
-        <button className="grid-item">.</button>
-        <button className="grid-item">=</button>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
