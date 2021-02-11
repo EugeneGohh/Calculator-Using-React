@@ -1,6 +1,6 @@
 .result {
   height: 60px;
-  background-color: #bbb;
+  background-color: #393e46;
   width: 100%;
 }
 
@@ -10,17 +10,18 @@
 }
 
 .calculator-body {
-  max-width: 400px;
+  max-width: 900px;
   margin: auto;
+  color: white;
 }
 
 .button {
   display: block;
-  background-color: #bbb;
+  background-color: white;
 }
 
 button {
   width: 25%;
-  height: 60px;
-  font-size: 30px;
+  height: 70px;
+  font-size: 40px;
 }
