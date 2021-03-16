@@ -62,6 +62,9 @@ export class App extends Component {
   render() {
     return (
       <div>
+        <div className="heading">
+          <h1>Eugene's Calculator</h1>
+        </div>
         <div className="calculator-body">
           <CalcOutput outcome={this.state.outcome} />
           <CalcButton onClick={this.onClick} />
