@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
-import CancelIcon from "@material-ui/icons/Cancel";
 
 export class CalcButton extends Component {
   render() {
@@ -11,7 +8,7 @@ export class CalcButton extends Component {
           (
         </button>
         <button name="CE" onClick={(e) => this.props.onClick(e.target.name)}>
-          <CancelIcon />
+          DEL
         </button>
         <button name=")" onClick={(e) => this.props.onClick(e.target.name)}>
           )
@@ -30,7 +27,7 @@ export class CalcButton extends Component {
           3
         </button>
         <button name="+" onClick={(e) => this.props.onClick(e.target.name)}>
-          <AddIcon />
+          +
         </button>
 
         <button name="4" onClick={(e) => this.props.onClick(e.target.name)}>
@@ -43,7 +40,7 @@ export class CalcButton extends Component {
           6
         </button>
         <button name="-" onClick={(e) => this.props.onClick(e.target.name)}>
-          <RemoveIcon />
+          -
         </button>
 
         <button name="7" onClick={(e) => this.props.onClick(e.target.name)}>

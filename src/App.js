@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./components/style.css";
 import CalcOutput from "./components/calcOutput";
 import CalcButton from "./components/calcButton";
+import { evaluate } from "mathjs";
 
 export class App extends Component {
   constructor() {
@@ -14,13 +15,13 @@ export class App extends Component {
   }
 
   onClick = (button) => {
-    /* Condition */
+    // For condtion
 
     if (button === "=") {
       this.calculate();
     } else if (button === "C") {
       this.reset();
-    } else if (button === ".CE") {
+    } else if (button === "CE") {
       this.backspace();
     } else {
       this.setState({
@@ -29,12 +30,12 @@ export class App extends Component {
     }
   };
 
-  /* Calculate */
+  // Calculate logic
   calculate = () => {
     try {
       this.setState({
         /* Evaluates JavaScript code represented as a string */
-        outcome: (eval(this.state.outcome) || "") + "",
+        outcome: (evaluate(this.state.outcome) || "") + "",
       });
     } catch (e) {
       this.setState({
@@ -43,18 +44,18 @@ export class App extends Component {
     }
   };
 
-  /* Reset */
+  // Reset logic
   reset = () => {
     this.setState({
       outcome: "",
     });
   };
 
-  /* Backspace */
+  // Backspace's logic
   backspace = () => {
     this.setState({
-      /*  Returns the selected elements in an array, as a new array object */
-      outcome: this.state.outcome.slice(0, -1),
+      // If user press backspace it'll clear the value and updates it.
+      outcome: " ",
     });
   };
 
