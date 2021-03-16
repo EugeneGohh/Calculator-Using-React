@@ -10,7 +10,7 @@ export class App extends Component {
 
     /* Result is a dynamic information thus we'll use (this.state) */
     this.state = {
-      outcome: "",
+      answer: "",
     };
   }
 
@@ -25,7 +25,7 @@ export class App extends Component {
       this.backspace();
     } else {
       this.setState({
-        outcome: this.state.outcome + button,
+        answer: this.state.answer + button,
       });
     }
   };
@@ -35,11 +35,11 @@ export class App extends Component {
     try {
       this.setState({
         /* Evaluates JavaScript code represented as a string */
-        outcome: (evaluate(this.state.outcome) || "") + "",
+        answer: (evaluate(this.state.answer) || "") + "",
       });
     } catch (e) {
       this.setState({
-        outcome: "Syntax Error/Undefined",
+        answer: "Syntax Error/Undefined",
       });
     }
   };
@@ -47,7 +47,7 @@ export class App extends Component {
   // Reset logic
   reset = () => {
     this.setState({
-      outcome: "",
+      answer: "",
     });
   };
 
@@ -55,7 +55,7 @@ export class App extends Component {
   backspace = () => {
     this.setState({
       // If user press backspace it'll clear the value and updates it.
-      outcome: " ",
+      answer: " ",
     });
   };
 
@@ -63,7 +63,7 @@ export class App extends Component {
     return (
       <div>
         <div className="calculator-body">
-          <CalcOutput outcome={this.state.outcome} />
+          <CalcOutput outcome={this.state.answer} />
           <CalcButton onClick={this.onClick} />
         </div>
       </div>
