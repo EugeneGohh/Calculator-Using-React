@@ -13,7 +13,6 @@
 1. JavaScript
 2. React
 3. npm
-4. MaterialUI
 5. Git & GitHub
 
 ## Status
